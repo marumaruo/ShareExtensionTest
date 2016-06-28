@@ -24,8 +24,20 @@ class ShareViewController: SLComposeServiceViewController {
         //全体的に if let か gard letに書き換える★ as!→as? に
         //send grid swift など使う？
         
-        let inputItem = self.extensionContext!.inputItems.first as! NSExtensionItem
-        let itemProvider = inputItem.attachments![0] as! NSItemProvider
+        guard let extensionContext = self.extensionContext else {
+            return
+        }
+        
+        guard let inputItem = extensionContext.inputItems.first as? NSExtensionItem else {
+            return
+        }
+        
+        guard let itemProvider = inputItem.attachments![0] as? NSItemProvider else {
+            return
+        }
+        
+//        let inputItem = self.extensionContext!.inputItems.first as! NSExtensionItem
+//        let itemProvider = inputItem.attachments![0] as! NSItemProvider
         
         if (itemProvider.hasItemConformingToTypeIdentifier("public.url")) {
             itemProvider.loadItemForTypeIdentifier("public.url", options: nil, completionHandler: { (urlItem, error) in
