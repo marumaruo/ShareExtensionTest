@@ -66,7 +66,7 @@ class ShareViewController: SLComposeServiceViewController, MFMailComposeViewCont
         }
         
         var mailViewController = MFMailComposeViewController()
-        var toRecipients = ["toshiharu.ishimaru@gmail.com"] //Toのアドレス指定
+        var toRecipients = ["hoge@gmail.com"] //Toのアドレス指定
         //        var CcRecipients = ["cc@1gmail.com","Cc2@1gmail.com"] //Ccのアドレス指定
         //        var BccRecipients = ["Bcc@1gmail.com","Bcc2@1gmail.com"] //Bccのアドレス指定
         
