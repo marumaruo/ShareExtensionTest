@@ -34,14 +34,13 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>NSExtensionActivationRule</key>
-			<string>TRUEPREDICATE</string>
-			<dict>
+            <dict>
                 <key>NSExtensionActivationSupportsImageWithMaxCount</key>
-                <integer>5</integer>
+                <integer>10</integer>
                 <key>NSExtensionActivationSupportsMovieWithMaxCount</key>
-                <integer>5</integer>
+                <integer>1</integer>
                 <key>NSExtensionActivationSupportsWebURLWithMaxCount</key>
-                <integer>5</integer>
+                <integer>1</integer>
             </dict>
 		</dict>
 		<key>NSExtensionMainStoryboard</key>
